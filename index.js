@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
 
-const whitelist = ['http://localhost:4000/', 'https://127.0.0.1:5500/'];
+const whitelist = ['http://localhost:4000/', 'https://127.0.0.1:3000/'];
 const options = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
